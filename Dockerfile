@@ -3,16 +3,17 @@
 #
 # Instructions:
 # =============
-# 1. Create an empty directory and copy this file into it.
+# 1. Create an empty directory and copy the sqlite db file && this file into it.
 #
 # 2. Create image with: 
-#	docker build --tag VT:latest .
+#	docker build --tag vt:latest .
 #
 # 3. Run with: 
-#	docker run -d -p 3000:3000 --name VT.container VT
+# On windows: 
+#   docker run -d -p 3000:3000 -v %cd%:/var --name vt.container vt
+# On linux: 
+#	docker run -d -p 3000:3000 -v $(pwd):/var --name vt.container vt
 #
-# 4. Login to running container (to update config (vi config/app.json): 
-#	docker exec -ti --user root VT.container /bin/sh
 # --------------------------------------------------------------------
 
 FROM node:14-alpine
