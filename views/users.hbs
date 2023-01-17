@@ -3,7 +3,11 @@
 
 <h1>Staff</h1>
 
+
+
 {{> show_flash_messages }}
+
+
 
 <div class="row">
   <div class="col-md-3 lead">{{company.name}}'s staff</div>
@@ -57,7 +61,7 @@
  
     <tbody>
      
-        {{#if (if_equal this.current_user_department 3)}}  
+        {{#if (if_equal_2 this.current_user_department 3)}}  
              
         {{# each users_info}}
     

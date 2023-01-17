@@ -21,13 +21,13 @@
           <li><a href="/calendar/">Calendar</a></li>
           {{!-- ahmed --}}
          
-
+          {{!-- // here  --}}
           {{# unless keep_team_view_hidden }}
             <li><a href="/calendar/teamview/">Team View</a></li>
           
           {{/ unless }}
 
-           {{#if (if_equal logged_user.dataValues.DepartmentId 3)}}  
+           {{#if (if_equal_2 logged_user.dataValues.DepartmentId 3)}}  
               <li class="hidden-xs"><a href="/users/">Employees</a></li>
                
        
